@@ -165,7 +165,7 @@ aside {
 
 #conteiner0{
     width: 100%;
-    
+  
     margin: 0 auto;
     
 
@@ -173,22 +173,27 @@ aside {
 /*settingBlocchi*/
 #contenitore1{
     border: 1.5px solid #dee1e3;
-    display: inline-block;
+    display: inline-block;           
+    margin: 5px;  
    width: 20%;
    vertical-align: middle;
-
+   float: inline-end;
 }
 #contenitore2{
     border: 1.5px solid #dee1e3;
-    display: inline-block;
+    display: inline-block;           
+margin: 5px;  
     width: 20%;
     vertical-align: middle;
+    float: inline-end;
 }
 #contenitore3{
     border: 1.5px solid #dee1e3;
-    display: inline-block;
+    display: inline-block;           
+    margin: 5px;  
     width: 20%;
     vertical-align: middle;
+    float: inline-end;
 }
 
 #imag {
