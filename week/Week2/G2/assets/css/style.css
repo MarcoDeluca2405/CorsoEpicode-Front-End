@@ -1,0 +1,16 @@
+body{
+padding: 0;
+margin: 0 auto;
+text-align: center;
+background: rgb(200,15,15);
+background: linear-gradient(90deg, rgba(200,15,15,1) 0%, rgba(66,66,138,1) 35%, rgba(22,197,232,1) 100%);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    
+    background: rgb(230,34,57);
+    background: linear-gradient(-10deg, rgba(230,34,57,0.8) 50%, rgba(252,176,69,80) 35%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
