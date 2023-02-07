@@ -1,7 +1,7 @@
 
 const b= 3.14;
-var a = "Aldo";
-let c = "cliente";
+let a = "Aldo";
+var c = "cliente";
 
 
 document.getElementById('concatena').innerHTML=a+', '+c+', '+b;
