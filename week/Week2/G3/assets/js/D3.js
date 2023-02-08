@@ -19,11 +19,12 @@ IlPiugrande(a,b);
 function IlPiugrande(_a,_b){
 this.a=_a;
 this.b=_b;
+a=Number(a);
+b=Number(b);
 
+ 
 
-
-
-if(a=>b){
+if(a>b){
 document.getElementById("valore").innerHTML += a;
 console.log(a);
 
