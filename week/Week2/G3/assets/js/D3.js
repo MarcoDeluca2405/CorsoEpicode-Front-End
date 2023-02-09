@@ -122,9 +122,9 @@ let totaleSott=0;
 
 
 totaleAdd= Number(a)+Number(b);
-totaleSott=Number(a)+Number(b);
+totaleSott=Number(a)-Number(b);
 console.log(totaleAdd);
-if(totaleAdd==8 || totaleSott==8 && Number(a)==8 && Number(b)==8){
+if(totaleAdd==8 || totaleSott==8 || Number(a)==8 && Number(b)==8){
     document.getElementById("valore4").innerHTML += "si";
     console.log("si");
 
