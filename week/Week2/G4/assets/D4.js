@@ -1,3 +1,5 @@
+const a= [1,2,3];
+console.log(a[10]);
 const starWarsCharacters = [
     {
       name: "Luke Skywalker",

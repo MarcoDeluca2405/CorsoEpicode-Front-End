@@ -1,0 +1,106 @@
+/*Stile Globale*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.main{
+    margin: 0 auto;
+    width: fit-content;
+
+}
+
+/*Stile Titolo*/
+h1{
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  color:rgb(23, 23, 78);
+  border: inset rgb(21, 21, 141) 2px;
+  background: linear-gradient(90deg, rgba(34,230,159,1) 20%, rgba(69,85,252,1) 100%);
+  position: relative;
+}
+/*Stile Contenitore*/
+.contenitore{
+  box-sizing: border-box;
+  width: 20%;
+  height: 30%;
+  border: 5px outset whitesmoke;
+  background-image: url('../img/back.webp');
+  object-fit: cover;
+  position:absolute;
+  left: 42%;
+  bottom: 50%;
+  text-align: center;
+  border-radius: 10%;
+ 
+  
+}
+/*Posizione Della Tabella*/
+#calcolo{
+  margin: 0 auto;
+transform: translateY(20%);
+
+
+}
+
+/*Back_Ground_Cover_Video*/
+.videoScreen{
+  overflow:hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover
+}
+
+/*Stile Testo*/
+#testo{
+width: 225px;
+height: 20px;
+font-size: larger;
+border: outset;
+background-color: black;
+color: white;
+text-align: right;
+transform:translateY(10px);
+}
+
+/*Stile Bottone*/
+.bottone{
+  font-family: 'Lobster', cursive;
+    width: 50px;
+    height: 40px;
+    margin: 1px;
+    border:inset;
+   background-color: rgb(0, 0, 0);
+   font-size: large;
+   border-radius: 70%;
+   color: whitesmoke;
+   
+   
+}
+
+#piu{
+border-top: 1.5px solid rgb(255, 252, 252);
+border-left: 1px solid rgb(255, 255, 255);
+
+}
+#diviso{
+  border-top: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);;
+  }
+
+  #meno{
+    border-left: 1px solid rgb(255, 255, 255);;
+  }
+  #per{
+    border-right: 1px solid rgb(255, 255, 255);;
+  }
+  #A{
+    border-left: 1px solid rgb(255, 255, 255);;
+    border-bottom: 1px solid rgb(255, 255, 255);;
+  }
+  #uguale{
+    border-right: 1px solid rgb(255, 255, 255);;
+    border-bottom: 1px solid rgb(255, 255, 255);;
+  }
+
+#AC{
+  background: radial-gradient(circle, rgba(251,63,79,0.8239670868347339) 0%, rgba(252,70,70,1) 100%);}

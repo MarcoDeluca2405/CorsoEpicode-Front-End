@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Progetto Week 2</title>
+</head>
+
+
+<!--Corpo-->
+
+<body>
+    <!--Tag Video per il Background-->
+    <video muted autoplay loop class="videoScreen">
+        <source src="assets/video/live.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <nav>
+
+
+        </nav>
+
+
+
+        <!--Main-->
+        <div class="main">
+
+
+    </header>
+
+    <!--Titolo-->
+    <h1>Benvenuti alla mia calcolatrice!</h1>
+
+
+    <fieldset class="contenitore">
+
+        <form name="form">
+            <!--Testo della Calcolatrice-->
+            <input type="text" id="testo" value="0">
+
+            <!--Tabella per posizionamento dei bottoni-->
+            <table id="calcolo">
+
+                <tr>
+                    <td>
+                        <button type="button" class="bottone" id="7" value="7" onclick="num(this.value)">7</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="8" value="8" onclick="num(this.value)">8</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="9" value="9" onclick="num(this.value)">9</button>
+                    </td>
+
+                    <td id="piu">
+                        <button type="button" class="bottone" id="+" value="+" onclick="num(this.value)">+</button>
+                    </td>
+
+                    <td id="diviso">
+                        <button type="button" class="bottone" id="/" value="/" onclick="num(this.value)">/</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <button type="button" class="bottone" id="4" value="4" onclick="num(this.value)">4</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="5" value="5" onclick="num(this.value)">5</button>
+
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="6" value="6" onclick="num(this.value)">6</button>
+                    </td>
+
+                    <td id="meno">
+                        <button type="button" class="bottone" id="-" value="-" onclick="num(this.value)">-</button>
+                    </td>
+
+                    <td id="per">
+                        <button type="button" class="bottone" id="*" value="*" onclick="num(this.value)">*</button>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <button type="button" class="bottone" id="1" value="1" onclick="num(this.value)">1</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="2" value="2" onclick="num(this.value)">2</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="3" value="3" onclick="num(this.value)">3</button>
+                    </td>
+
+                    <td id="A">
+                        <button type="button" class="bottone" id="AC" value="AC" onclick="del()">AC</button>
+                    </td>
+
+                    <td id="uguale">
+                        <button type="button" class="bottone" id="=" value="=" onclick="operazione()">=</button>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <button type="button" class="bottone" id="(" value="(" onclick="num(this.value)">(</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="0" value="0" onclick="num(this.value)">0</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id="." value="." onclick="num(this.value)">.</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="bottone" id=")" value=")" onclick="num(this.value)">)</button>
+                    </td>
+
+                    <td>
+
+                    </td>
+
+                </tr>
+
+
+            </table>
+        </form>
+    </fieldset>
+
+
+
+    </div>
+
+
+
+    <script src="assets/js/Calcolatrice.js"></script>
+</body>
+<footer>
+
+
+</footer>
+
+</html>
