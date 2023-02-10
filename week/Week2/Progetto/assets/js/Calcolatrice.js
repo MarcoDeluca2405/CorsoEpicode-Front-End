@@ -22,3 +22,4 @@ function operazione(){
 function del(){
     document.getElementById("testo").value ="0";
 }
+document.getElementById('testo').disabled= true;
