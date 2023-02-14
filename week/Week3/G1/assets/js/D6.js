@@ -148,11 +148,12 @@ console.log(reverseString("ciao"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-var upperFirst = (target)=>{
-let parola=target.split(" ");
-let uppercase = parola.map(element => element.charAt(0).toUpperCase()+parola.slice(1));
-return uppercase;
-
+function upperFirst(target){
+target.map((parola)=>{
+    const capt=parola.charAt(0).toUpperCase();
+    const restante=parola.slice(1).toLowerCase();
+    return capt=capt+restante;
+})
 
 }
 console.log(upperFirst("ciao come stai"));
