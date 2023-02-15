@@ -2,6 +2,7 @@ html,
 html,
 body {
     margin: 0;
+    background-color: violet;
 }
 
 h1 {
