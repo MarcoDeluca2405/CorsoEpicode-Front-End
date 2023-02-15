@@ -16,7 +16,16 @@ h1 {
 #taskList {
     list-style-type: none;
 }
+#wrap-list{
+margin: 0 auto;
+padding-bottom: 2em;
+}
+.custom-li{
+    margin: 0 auto;
+    border: 1px solid black;
+    p
+}
+.gg-trash{
+ margin-left: 90%;
 
-.deleteButton {
-    text-align: right;
 }

@@ -3,8 +3,8 @@ const taskList = document.getElementById("taskList");
 
 var createDeleteButton = (taskItem) => {
     let deleteButton = document.createElement("button");
-    deleteButton.classList.add("Button");
-    deleteButton.textContent = "Elimina";
+    deleteButton.classList.add("gg-trash");
+    //deleteButton.textContent = "Elimina";
     taskItem.appendChild(deleteButton);
     return deleteButton;
 }
