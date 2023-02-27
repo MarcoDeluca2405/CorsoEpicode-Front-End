@@ -404,7 +404,7 @@ div img{
     iframe{
         margin: 0 auto;
         height:150px;
-        width: 20%;
+        width: 32%;
         display: inline-block;
         vertical-align: middle;
        align-items: center;
@@ -416,7 +416,7 @@ div img{
     align-items: center;
     display: inline-block;
     vertical-align:middle;
-    width: 40%;
+    width: 67%;
     margin: 0 auto;
     
     }
@@ -444,11 +444,14 @@ div img{
         font-size: 1.8em;
     }
 
-   
+   aside{
+    width: 100%;
+    margin:10px;
+   }
     aside div{
         font-size:smaller ;
         display: inline-block;
-        width: 30%;
+        width: 33%;
         height: 100px;
         
     }
