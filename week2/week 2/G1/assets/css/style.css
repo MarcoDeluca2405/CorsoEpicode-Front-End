@@ -444,11 +444,13 @@ div img{
         font-size: 1.8em;
     }
 
+   
     aside div{
         font-size:smaller ;
         display: inline-block;
         width: 30%;
         height: 100px;
+        
     }
     
     footer{
@@ -457,4 +459,51 @@ div img{
     }
 
 
+}
+
+@media print{
+    article h1{
+        font-weight:bolder;
+        font-size: 35px;
+        width: 80%;
+    }
+
+    article p,article li{
+        font-weight:500;
+        font-size: 1em;
+    }
+
+    article h2{
+        font-weight: 600;
+    }
+
+    table{
+        font-size: 0.7em;
+        margin: 100px auto;
+        width: 60%;
+    }
+    table tr{
+        font-weight: bolder;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    
+    header{
+        visibility: hidden;
+    }
+    footer{
+        visibility: hidden;
+    }
+    iframe{
+        visibility: hidden;
+    }
+    section{
+        visibility: hidden;
+    }
+    aside{
+        visibility: hidden;
+    }
 }
