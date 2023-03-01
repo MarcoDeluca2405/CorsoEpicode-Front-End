@@ -524,7 +524,7 @@ footer a {
 
 .plus #button,.calender #button,.arrow #button{
   border: 5px solid #fffdfd;
-  background-color: rgba(197, 192, 192, 0.8);
+  background-color: rgba(197, 192, 192, 0.5);
   border-radius: 10px;
   padding: 0;
   
