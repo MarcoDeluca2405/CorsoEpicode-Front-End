@@ -88,7 +88,7 @@ box-shadow: 0px 0px 30px 1px rgb(30, 0, 255);
 
 .animated{
     position: absolute;
-    animation:position 5s;
+    animation:position 5s infinite;
     
 }
 
