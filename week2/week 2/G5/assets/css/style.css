@@ -329,6 +329,11 @@ align-items: center;
     margin-top: 120px;
 }
 
+.conteiner-section2{
+    position: sticky;
+    top: 100px;
+}
+
 .filter{
     display: flex;
     align-items: center;
