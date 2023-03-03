@@ -7,8 +7,8 @@ function myFunction() {
   if (document.documentElement.scrollTop > 700) {
     header.classList.remove("navChangeRemove");
     header.classList.add("navChange");
-    button.classList.remove(".AnimatedRemoved");
-    button.classList.add(".Animated");
+    button.classList.remove("AnimatedRemoved");
+    button.classList.add("Animated");
 
 
     setTimeout(2000);
@@ -18,10 +18,10 @@ function myFunction() {
 }
 if(document.documentElement.scrollTop < 700){
     header.classList.remove("navChange");
-    button.classList.remove(".Animated");
+    button.classList.remove("Animated");
     header.classList.add("navChangeRemove");
     
-    button.classList.add(".AnimatedRemoved");
+    button.classList.add("AnimatedRemoved");
 
     setTimeout(2000);
     button.setAttribute("style","background-color:black");
