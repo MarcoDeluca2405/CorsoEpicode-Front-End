@@ -85,10 +85,9 @@ console.log(cars);
 */
 const newObjet=function(){
 let newElement={
-    Nome: "Marco",
-    Cognome: "De Luca",
+    brand: 'Citroën',
+    model: 'C3',
     licensePlate:"activated",
-    Eta:"27",
     color: 'black',
     trims: ['life', 'style', 'r-line']
 }
