@@ -1,0 +1,4 @@
+@mixin spacings($p-display,$p-width,$m-display,$m-width){
+    padding-#{$p-display}:$p-width;
+    margin-#{$m-display}:$m-width;
+}

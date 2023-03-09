@@ -1,0 +1,110 @@
+@import "./partials/Reset";
+@import "./partials/Colori";
+@import "./partials/Font";
+@import "./partials/Spaziature";
+@import "./partials/Bottoni";
+@import "./partials/Mixins";
+@import "./partials/Animazioni";
+
+*{
+    color: $colorText;
+    font-family: $fontFamily;
+    
+}
+body{
+    background-color: white;
+}
+
+.container{
+   @include grid;
+   background-color: crimson;
+   justify-content: space-between;
+   i{
+    font-size: larger;
+    
+    color: black
+   }
+}
+
+.link{
+    @include grid;
+   
+}
+
+ul{
+    @include grid;
+    
+}
+
+li{
+    margin-right: 30px;
+}
+
+.containerHeadLine{
+
+    h1{
+        @include big-text;
+        background-color:rgb(216, 8, 63);
+    }
+
+        .buttonColorB{
+            @include buttonBlu($colorButtonBlu);
+            @include trasform;
+          
+        }
+        .buttonColorO{
+            @include buttonOrange($colorButtonorange);
+            @include trasform;
+        }
+        .buttonColorG{
+            @include buttonGreen($colorButtongreen);
+            @include trasform;
+        }
+        
+}
+
+
+section{
+    @include grid;
+    justify-content: center;
+    width: 100%;
+    @include borderColorHero($bg_hero);
+    .img{
+        width: 20%;
+    img{
+        max-width: 100%;
+    }
+}
+
+    .para{
+       
+        width: 20%;
+    }
+
+}
+
+aside{
+    .container-card{
+        @include gridCol;
+
+        margin: 4px;
+        margin-top: 20px;
+            width: 700px;
+            display: flex;
+            justify-content: center;
+            .card{
+                @include floating;
+                margin:2px;
+                margin-top: 20px;
+            img{
+                width: 100%;
+            }
+        p{
+            color:black;
+        }
+    }
+
+}
+    }
+    
+
