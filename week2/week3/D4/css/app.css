@@ -133,8 +133,9 @@ aside .container-card {
   flex-flow: wrap;
   margin: 4px;
   margin-top: 20px;
-  width: 700px;
+  width: 50%;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
 }
 aside .container-card .card {
@@ -149,4 +150,5 @@ aside .container-card .card img {
 }
 aside .container-card .card p {
   color: black;
+  text-align: center;
 }/*# sourceMappingURL=app.css.map */
