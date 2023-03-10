@@ -1,0 +1,17 @@
+$withdButton:10px;
+
+@mixin withdButton{
+    font-size: $withdButton;
+    
+}
+
+@mixin hoverButtpn{
+    transform: translateY(0px);
+    color:white;
+    transition: background-color 2s, color 2s, transform 4s;
+    &:hover{
+        background-color: white;
+        color:black;
+        transform: translateY(-10px);
+        }
+}

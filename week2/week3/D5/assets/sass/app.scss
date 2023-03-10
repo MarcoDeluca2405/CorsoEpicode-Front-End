@@ -1,0 +1,156 @@
+@import "./partials/variables";
+@import "./partials/fonts";
+@import "./partials/buttons";
+@import "./partials/navbar";
+@import "./partials/sfondo";
+
+body{
+    @include colorNav;
+    h1{color: white}
+    h3{color: white;}
+    p{color: white;}
+    .select{
+        width: 100px;
+        height: 30px;
+        padding: 3px;
+        margin-left: 30px;
+        border: 1px solid white
+    }
+}
+
+
+nav{
+
+    img{
+        @include logo;
+    }
+
+
+    li{
+        @include fontNav;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+     
+        }
+    }
+
+
+.cont{
+    height: 60px;
+    @include colorNav;
+.navbar-dark{
+    @include height;
+    @include colorNav;
+}
+
+.form-control{
+    @include withdButton;
+}
+
+svg{
+    @include iconSize($iconSize);
+
+}
+
+
+
+}
+
+
+.nav-link{
+    width:max-content;
+    color: rgba(255, 255, 255, 0.535);
+    &:hover{
+        color: red;
+    }
+}
+
+
+.img{
+    width: 60px;
+}
+
+.carousel-item{
+img{
+    width: 300px;
+    height: 200px;
+    transition:width 3s, height 1s;
+    
+    &:hover{
+        width: 1000px;
+        height: 220px;
+        
+    }
+    &:not(:hover){
+        width: 300px;
+        height: 200px;
+    }
+}
+
+}
+
+
+footer{
+    svg{
+        margin-right: 20px;
+        scale: 1.5;
+        color:grey;
+    }
+}
+
+
+.background{
+     @include backgroundCover;
+     position: relative;
+     button{
+        scale: 0.7;
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        margin: 0;
+       
+     }
+}
+
+
+.flex-column{
+.span{
+    font-size: 10px;
+.spanbold{
+    font-weight: bold;
+}
+
+}
+}
+
+.btnfirst{
+    font-size: 12px;
+    width: 50px;
+}
+
+.btn-h{
+    @include hoverButtpn;
+}
+.nav-item{
+
+.nav-link{
+    position: relative;
+    border:none;
+    border-radius: 20px;
+    top: 0;
+    transition:box-shadow 1s, top 0.5s ;
+    &:focus{
+        color: red;
+        top:-5px
+        
+    }
+    &:hover{
+        -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 6px 5px 9px -4px rgba(0,0,0,0); 
+box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 6px 5px 9px -4px rgba(0,0,0,0);
+        top:-5px;
+
+    }
+}
+}

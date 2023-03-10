@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./assets/css/app.css" rel="stylesheet">
+    <title>Netflix</title>
+</head>
+<body>
+<header>
+ <div class="container-fluid cont">
+<nav class="navbar navbar-expand-sm m-0 p-0">
+<div class="row d-flex">
+  <div class="col col-2">
+  <a href="/index.html" class="navbar-brand d-flex"><img src="/assets/netflix_logo.png"></a>  
+</div>
+
+</div>
+
+</nav>
+ </div>
+</header>
+
+    <div class="container w-50">
+        <h1 class="h1">Edit Profile</h1>
+        <hr class="bg-light">
+    
+        <div class="row row-cols-2">
+            
+            <div class="col col-3">
+
+                <div class="container background d-flex float-start">
+
+                    <button class="btn btn-dark border rounded-circle border-1"> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.156.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                      </svg></button>
+                   
+                </div>
+               
+    
+            </div>
+
+            <div class="col">
+
+                <div class="d-flex flex-column">
+
+                    <label class="text-light bg-dark bg-gradient"> <span class="mx-2">Strive Student</span></label>
+                    
+                    <p class="mt-5">Language:</p>
+                    <select class="form-select w-50 bg-dark btn-outline-dark text-light">
+                        <option selected value="Italiano">Italiano</option>
+                        <option  value="Inglese">Inglese</option>
+                        <option  value="Francese">Francese</option>
+                    </select>
+
+                    <hr class="bg-light">
+
+                    <p class="mt-2">Maturity Settings:</p>
+                    <button class="btn btn-dark btn-outline-dark text-light m-0 p-0">ALL MATURITY RATINGS</button>
+                    <p class="mt-1 span"><span class="spanbold">Show titles of all maturity ratings</span> for this profile.</p>
+
+                    <button type="button" class=" btnfirst btn btn-dark bg-dark btn-outline-light p-1">EDIT</button>
+
+                        <hr class="bg-light">
+                        <p class="mt-2">Autoplay controls</p>
+                        <div class="form-check">
+                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-light" for="flexCheckDefault">
+                              Autoplay next episode in a series on all devices.
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input bg-dark " type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label text-light" for="flexCheckChecked">
+                              Autoplay previews while browsing on all devices.
+                            </label>
+                          </div>
+
+                          <hr class="bg-light">
+
+                          <div class="d-inline-flex justify-content-between">
+                            <button class="btn-h btn btn-dark btn-outline-dark">SAVE</button>
+                            <button class="btn-h btn btn-dark btn-outline-dark ">CANCEL</button>
+                            <button class="btn-h btn btn-dark btn-outline-dark ">DELETE PROFILE</button>
+                            
+                          </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

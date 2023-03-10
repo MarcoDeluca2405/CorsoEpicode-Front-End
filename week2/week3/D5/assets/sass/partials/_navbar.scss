@@ -1,0 +1,13 @@
+@mixin logo{
+    max-width: 70%;
+
+    
+}
+
+@mixin colorNav{
+    background-color: lighten($color: #000000, $amount: 10)
+}
+
+@mixin height{
+        height: 100%;
+}

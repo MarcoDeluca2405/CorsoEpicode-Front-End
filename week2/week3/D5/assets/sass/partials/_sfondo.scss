@@ -1,0 +1,7 @@
+@mixin backgroundCover{
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url("/assets/avatar.png");
+    width: 110px;
+    background-size: 100px 100px;
+}

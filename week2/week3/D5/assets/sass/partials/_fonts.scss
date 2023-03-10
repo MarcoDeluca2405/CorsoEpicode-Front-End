@@ -1,0 +1,11 @@
+$navBarFont:14px;
+$iconSize:20;
+
+@mixin fontNav{
+font-size: $navBarFont;
+}
+
+@mixin iconSize($size){
+    font-size: $size;
+    color: white;
+}
