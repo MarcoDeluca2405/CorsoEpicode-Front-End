@@ -25,7 +25,7 @@ let breed=document.getElementById("breed");
 let button2=document.getElementById("add2");
 let list2=document.getElementById("list2");
 let label=document.getElementById("proprietario");
-
+let arrayPetPerson= [];
 let arrayPet= [];
 
 const createPet=()=>{
