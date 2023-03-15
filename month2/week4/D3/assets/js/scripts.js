@@ -26,7 +26,8 @@ return response.json();
         
         let newImg2=document.createElement("img");
         newImg2.src=el.img;
-        newImg2.classList.add("card-img-top","w-25");
+        newImg2.classList.add("card-img-top","w-50");
+        
         
         
         let newBody3=document.createElement("div");
@@ -42,11 +43,11 @@ return response.json();
         
         
         let newBody4=document.createElement("div");
-        newBody4.classList.add("card-footer");
+        newBody4.classList.add("card-footer","bg-dark","bg-gradient");
         
         
         let newPrice2=document.createElement("p");
-        newPrice2.classList.add("card-text","text-dark");
+        newPrice2.classList.add("card-text","text-light");
         newPrice2.classList.add("text-center");
         newPrice2.innerText=el.price+"€";  
 
@@ -84,15 +85,18 @@ return response.json();
             totale=totalstorage-el.price;
           
             localStorage.setItem("totale",totale);
+
             selectitem();
-         
+            if(index==0){
+                totaleLocal.innerText="il totale del carrello è: 0€";
+            }
           })
           
             
        
 
         let tot=localStorage.getItem("totale");
-        totaleLocal.innerText=`il totale del carrello è: ${tot}`
+        totaleLocal.innerText=`il totale del carrello è: ${tot} €`;
 
         
         });
