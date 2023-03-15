@@ -78,8 +78,8 @@ return response.json();
 
 
         buttonRemoved.addEventListener("click",()=>{
-            
-            localStorage.removeItem(el[0]);
+            storage=JSON.parse(localStorage.getItem("storage"));
+            storage.removeItem();
             selectitem();
         })
 
@@ -171,7 +171,7 @@ data.forEach((el) => {
     
     
     newButtonDelette.addEventListener("click", ()=>{
-        newCards.style.display="none";
+        newCards.remove();
     });
 
     newButtonStorage.addEventListener("click",()=>{
