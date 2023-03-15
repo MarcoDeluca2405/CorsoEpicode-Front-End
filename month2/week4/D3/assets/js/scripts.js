@@ -7,17 +7,16 @@ return response.json();
     let list=document.getElementById("lista");
     let row2=document.getElementById("lib");
     let totaleLocal=document.getElementById("tot");
+    
     let totale=0;
-
+    let storage=[];
     console.log(data);
     
-
- 
-
-    const selectitem =function(){
+    const selectitem = function(){
+        list.innerHTML="";
          storage=JSON.parse(localStorage.getItem("storage"));
         console.log(storage);
-        storage.forEach((el)=>{
+        storage.forEach((el,index)=>{
         
         let newList2=document.createElement("li");
         newList2.classList.add("list-group-item","w-100","my-3");
@@ -76,15 +75,24 @@ return response.json();
         newBody4.appendChild(buttonRemoved);
 
 
-
+        
         buttonRemoved.addEventListener("click",()=>{
-            storage=JSON.parse(localStorage.getItem("storage"));
-            storage.removeItem();
+            storage.splice(index,1);
+            localStorage.setItem("storage",JSON.stringify(storage));
+            
+            let totalstorage=Number(localStorage.getItem("totale"));
+            totale=totalstorage-el.price;
+          
+            localStorage.setItem("totale",totale);
             selectitem();
-        })
+         
+          })
+          
+            
+       
 
         let tot=localStorage.getItem("totale");
-        totaleLocal.innerText=`il totale del carello è: ${tot}`
+        totaleLocal.innerText=`il totale del carrello è: ${tot}`
 
         
         });
@@ -176,15 +184,14 @@ data.forEach((el) => {
 
     newButtonStorage.addEventListener("click",()=>{
         if(storage){
-        storageLocal=localStorage.getItem("storage");
-        totale=totale+el.price;
+            let totalstorage=Number(localStorage.getItem("totale"));
+        totale=totalstorage+el.price;
         console.log(totale);
         let fileStorage={asin:el.asin,title:el.title,category:el.category,img:el.img,price:el.price};
         storage.push(fileStorage);
          storageLocal=localStorage.setItem("storage",JSON.stringify(storage));
         localStorage.setItem("totale",totale);
-        list.innerHTML="";
-        selectitem();}else{
+        selectitem()}else{
             storage=[];
         }
     });
