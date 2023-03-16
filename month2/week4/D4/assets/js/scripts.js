@@ -24,7 +24,7 @@ const createCard= function (item){
                     <button type="button" class="btn btn-sm btn-outline-secondary">
                       View
                     </button>
-                    <button type="button"  id="hide" class="btn btn-sm btn-outline-secondary">
+                    <button type="button"  id="hide" class="hide btn btn-sm btn-outline-secondary">
                       Hide
                     </button>
                   </div>
@@ -34,7 +34,19 @@ const createCard= function (item){
             </div>
           </div>`
 
-          
+          let button=document.querySelectorAll(".hide");
+          button.forEach(button => {
+            if (button.textContent.trim() === 'Hide') {
+                button.addEventListener('click', () => {
+                    const card = button.closest('.card');
+                    const row = card.parentNode;
+                    card.remove();
+                    if (row.childElementCount === 0) {
+                        row.remove();
+                    }
+                });
+            }
+        });
           
 }
 
@@ -62,8 +74,9 @@ try {
           row.innerHTML="";
         item.photos.forEach(element => {
           createCard(element);
-          let button=document.querySelectorAll("#hide");
-          button.forEach((btn)=>{
+       
+        /*  let button=document.querySelectorAll("#hide");
+         button.forEach((btn)=>{
             btn.addEventListener("click", ()=>{
               let cards=document.getElementsByClassName("card");
               Array.from(cards).forEach((c)=>{
@@ -72,6 +85,7 @@ try {
           
           })
         });
+*/
       })
 
  
