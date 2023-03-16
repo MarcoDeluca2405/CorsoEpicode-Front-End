@@ -5,10 +5,10 @@ let row=document.getElementById("row");
 let card=document.getElementById("card");
 
 const createCard= function (item){
-
+    
     row.innerHTML+=`
     
-    <div class="col-md-4" id="card" >
+    <div class="col-md-4"  >
             <div class="card mb-4 shadow-sm">
             <img src="${item.src.original}">
               <div class="card-body">
@@ -24,7 +24,7 @@ const createCard= function (item){
                     <button type="button" class="btn btn-sm btn-outline-secondary">
                       View
                     </button>
-                    <button type="button"  id="hider" class="btn btn-sm btn-outline-secondary">
+                    <button type="button"  id="hide" class="btn btn-sm btn-outline-secondary">
                       Hide
                     </button>
                   </div>
@@ -34,14 +34,10 @@ const createCard= function (item){
             </div>
           </div>`
 
-          let hide=document.getElementById("hider");
-          let card=document.getElementById("card");
-        
-          hide.addEventListener("click",()=>{
-            card.classList.add("d-none");
-          })
- 
+          
+          
 }
+
 
 
 
@@ -66,9 +62,17 @@ try {
           row.innerHTML="";
         item.photos.forEach(element => {
           createCard(element);
-
+          let button=document.querySelectorAll("#hide");
+          button.forEach((btn)=>{
+            btn.addEventListener("click", ()=>{
+              let cards=document.getElementsByClassName("card");
+              Array.from(cards).forEach((c)=>{
+            c.classList.add("d-none");
+            })
+          
+          })
         });
-
+      })
 
  
       });
@@ -107,6 +111,7 @@ let item= await response.json();
         row.innerHTML="";
       item.photos.forEach(element => {
         createCard(element);
+      
       });
 
     });
