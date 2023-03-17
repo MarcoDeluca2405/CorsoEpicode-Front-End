@@ -9,7 +9,7 @@ const createCard= function (item){
     row.innerHTML+=`
     
     <div class="col-md-4"  >
-            <div class="card mb-4 shadow-sm">
+            <div class="card  mb-4 shadow-sm">
             <img src="${item.src.original}">
               <div class="card-body">
                 <h5 class="card-title">${item.alt}</h5>
