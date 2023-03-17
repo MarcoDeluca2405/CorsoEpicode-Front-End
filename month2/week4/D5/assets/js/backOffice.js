@@ -61,8 +61,10 @@ const create=async (item)=>{
             spiner.classList.add("d-none");
             button.classList.add("d-none");
             button2.classList.add("d-none");
-            fhater.innerHTML+= `<button type="submit" id="mod" onclick="modificaItem()" class="btn btn-secondary mx-4">Modifica</button>`
-            fhater.innerHTML+=`<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           
+            fhater.innerHTML=`
+            <button type="submit" id="mod" onclick="modificaItem()" class="btn btn-secondary mx-4">Modifica</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Elimina
           </button>
           
