@@ -1,0 +1,33 @@
+.mybtn{
+    font-size: 10px;
+    transition: font-size 2s, color 2s;
+ 
+}
+
+.mybtn:hover{
+     font-size: 15px; 
+     color:deeppink;
+}
+
+.card{
+    position: relative;
+    animation: getImg 4s linear;
+
+}
+
+
+.bg-dark{
+    transition: color 1s;
+}
+.bg-dark::after{
+    background-color: white;
+}
+
+
+
+
+@keyframes getImg{
+
+    0%{opacity: 0%; top: 100px;}
+    100%{opacity: 100%; top: 0px;}
+}

@@ -13,6 +13,9 @@ const id_url=new URLSearchParams(window.location.search).get("id");
 const divModal=document.getElementById("mod");
 const divImg=document.getElementById("image");
 const spiner=document.getElementById("spinner");
+const buttonDark = document.getElementById("dark");
+const container =document.getElementById("container");
+let s_n = localStorage.getItem("night");
 
 let itemDel = async ()=>{
     try {
@@ -56,8 +59,35 @@ const create=async (item)=>{
         })
         
         let itemObj= await resposive.json();
+        
+        if(s_n==1){
+          let card = document.querySelectorAll(".card");
+          buttonDark.classList.toggle("bi-moon");
+          buttonDark.classList.toggle("bg-secodnary");
+          buttonDark.classList.toggle("btn-outline-dark");
+          buttonDark.classList.toggle("btn-outline-secondary");
+          body.classList.toggle("bg-dark");
+          body.classList.toggle("bg-gradient");
+          body.classList.toggle("text-white");
+          nav.classList.toggle("bg-dark");
+          nav.classList.toggle("text-light");
+          container.classList.toggle("text-white")
+          container.classList.toggle("bg-dark")
+        
+          card.forEach(el => {
+              el.classList.toggle("bg-dark");
+              el.classList.toggle("bg-gradient");
+              el.classList.toggle("border");
+              el.classList.toggle("border-3");
+              el.classList.toggle("border-secondary");
+        
+          })
+        
+        
+        }
 
         if(bool==true){
+          pressNight();
             spiner.classList.add("d-none");
             button.classList.add("d-none");
             button2.classList.add("d-none");
@@ -97,6 +127,7 @@ const create=async (item)=>{
            console.log("ciao");
 
         }else{
+          pressNight();
             spiner.classList.add("d-none");
             divModal.innerHTML+=` <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -125,7 +156,51 @@ const create=async (item)=>{
     } catch (error) {
         alert("Qualcosa è andato storto");
     }
+
 }
+
+
+
+const pressNight=()=>{
+
+  buttonDark.addEventListener("click", () => {
+         s_n=localStorage.getItem("night");
+         s_n++;
+         
+      
+      let card = document.querySelectorAll(".card");
+      buttonDark.classList.toggle("bi-moon");
+      buttonDark.classList.toggle("bg-secodnary");
+      buttonDark.classList.toggle("btn-outline-dark");
+      buttonDark.classList.toggle("btn-outline-secondary");
+      body.classList.toggle("bg-dark");
+      body.classList.toggle("bg-gradient");
+      body.classList.toggle("text-white");
+      nav.classList.toggle("bg-dark");
+      nav.classList.toggle("text-light");
+      container.classList.toggle("text-white")
+      container.classList.toggle("bg-dark")
+  
+      card.forEach(el => {
+          el.classList.toggle("bg-dark");
+          el.classList.toggle("bg-gradient");
+          el.classList.toggle("border");
+          el.classList.toggle("border-3");
+          el.classList.toggle("border-secondary");
+  
+      })
+  
+  
+      if(s_n!=1){
+          s_n=0;
+          localStorage.setItem("night",s_n);
+      }
+  
+      localStorage.setItem("night",s_n);
+  
+  })
+  
+  }
 
 const premuto= ()=>{
     form.addEventListener("submit",(e)=>{
