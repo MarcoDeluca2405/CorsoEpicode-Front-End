@@ -19,7 +19,7 @@ render(){
                 {Books.map((book)=>{
 
                     return(
-                        <Col className="Mybook my-3" xs={12} xm={6} xl={3}>
+                        <Col className="Mybook my-3" xs={6} xm={4} xl={3}>
 
    <Card className="h-100 w-100 position-relative" key={book.asin}>
       <Card.Img variant="top" src={book.img} />

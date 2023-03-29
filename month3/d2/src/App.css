@@ -77,6 +77,46 @@
   transition: height 1.2s linear;
 }
 
-.Mybook:hover{
-  height: 750px;
+
+
+
+
+
+
+@media screen and (min-width:300px ) {
+  
+  .Mybook:hover{
+    height: 500px;
+  }
+
+}
+
+
+
+@media screen and (min-width:560px ) {
+
+  .Mybook:hover{
+    height: 750px;
+  }
+
+}
+@media screen and (min-width:750px ) {
+
+  .Mybook:hover{
+    height: 880px;
+  }
+
+}
+
+@media screen and (min-width:1200px ) {
+
+  .Mybook:hover{
+    height:750px;
+  }
+}
+@media screen and (min-width:2200px ) {
+
+  .Mybook:hover{
+    height:1200px;
+  }
 }
