@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -24,16 +25,6 @@
   color: white;
 }
 
-.Miaimmagine{
-width: 500px;
-height: 500px;
-
-}
-.button1{
-  background-color: red;
-  
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -45,4 +36,47 @@ height: 500px;
   to {
     transform: rotate(360deg);
   }
+}
+
+.link{
+  text-decoration: none;
+}
+
+
+.hr{
+ position: absolute;
+  bottom: 0;
+ width: 100%;
+ left: 0;
+ padding: 0;
+ margin: 0;
+ color: rgb(255, 0, 0);
+ font-size: 40px;
+ 
+}
+
+
+.card{
+  width: 300px;
+}
+
+.card-body{
+  height: 250px;
+}
+
+
+.card-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.Mybook{
+  height: 200px;
+  transition: height 1.2s linear;
+}
+
+.Mybook:hover{
+  height: 750px;
 }
