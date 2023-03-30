@@ -21,9 +21,10 @@ class BookList extends Component{
 
             <Container>
 
-<InputGroup size="sm" className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-sm">Small</InputGroup.Text>
+<InputGroup size="md" className="mb-3 mt-4">
+        <InputGroup.Text id="inputGroup-sizing-sm">Search Title</InputGroup.Text>
         <Form.Control
+        className='bg-dark bg-gradient text-light'
           aria-label="Small"
           aria-describedby="inputGroup-sizing-sm"
           value={this.state.bookSearch}
