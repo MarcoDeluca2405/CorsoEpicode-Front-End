@@ -1,60 +1,71 @@
-
 import { Component } from 'react';
 import Container from 'react-bootstrap/esm/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Books from '../books/fantasy.json'
+import SingleBook from './SingleBook';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/esm/Col';
 
 class BookList extends Component{
 
-    state = {
 
-        titleBook:"",
-
+ state= {
+    search:{
+        bookSearch:""
     }
-    
-    
+ }
 
     render(){
-
+      
         return(
 
-       
+            <Container>
 
-            <Container className='mt-4 w-50'>
-
-                     <InputGroup size="sm" className="mb-3">
-            <InputGroup.Text id="inputGroup-sizing-sm">Search Title</InputGroup.Text>
-            <Form.Control
-              aria-label="Small"
-              aria-describedby="inputGroup-sizing-sm"
-              value={this.state.titleBook}
-              onChange={(e)=>{
-                this.setState({
-                    titleBook:e.target.value
-                })
-              }}
-              
-            />
-          </InputGroup>
-
-
-            <ListGroup>
-             {Books.map(books=>{
-                return(
-
-                    <ListGroup.Item key={books.asin}>{books.title}</ListGroup.Item>
-
-                );
-
-             })}   
+<InputGroup size="sm" className="mb-3">
+        <InputGroup.Text id="inputGroup-sizing-sm">Small</InputGroup.Text>
+        <Form.Control
+          aria-label="Small"
+          aria-describedby="inputGroup-sizing-sm"
+          value={this.state.bookSearch}
+          onChange={(e)=>{
+            this.setState({
+                search:{
+                    bookSearch:e.target.value
+                }
+            })
+          }}
         
-            </ListGroup>
-            </Container>
-        )
+        />
+      </InputGroup>
 
-    }
+           <Row>
+      {this.props.libri.filter(el=>el.title.toLowerCase().includes(this.state.search.bookSearch.toLocaleLowerCase())).map(book=>{
+
+return (
+    <Col>
+<SingleBook key={book.asin} libri={book}></SingleBook>
+</Col>
+)
+
+})}
+</Row>
+
+            </Container>
+
+
+        )
+     
+    
+
+
+      
+          
+
+
+        }
+
+
 }
+
 
 export default BookList;
