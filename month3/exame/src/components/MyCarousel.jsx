@@ -74,8 +74,8 @@ componentDidMount(){
 
             <Slider {...settings}>
 
-            {this.state.dataFilm?.map(el=>{
-               return <Filmcard src={el} />
+            {this.state.dataFilm.map(el=>{
+               return <Filmcard  src={el} />
             
     })}
      

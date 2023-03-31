@@ -6,7 +6,7 @@ const Filmcard = (props) =>
     <>
      
     <Card  className="cardImg" >
-                <CardImg src={props.src.Poster} style={{height:"400px"}}/>
+                <CardImg key={props.src.imdbID} src={props.src.Poster} style={{height:"400px"}}/>
             
      </Card>
 
