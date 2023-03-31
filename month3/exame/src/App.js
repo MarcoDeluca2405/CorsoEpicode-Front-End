@@ -11,7 +11,8 @@ let url="http://www.omdbapi.com/?i=tt3896198&apikey=769155e5&s=";
 let film1="The Lord Of the Rings";
 let film2="Marvel";
 let film3="Sherlock Holmes";
-{alert("i film si possono Swippare")}
+alert("i film si possono Swippare")
+
 function App() {
   return (
     <div className="App bg-dark text-white" >
