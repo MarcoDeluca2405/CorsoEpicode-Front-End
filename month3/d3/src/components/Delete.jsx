@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+
 import Button from 'react-bootstrap/Button';
 let key="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJhYzY2ZjY4MzQzMTAwMTRkZWE3N2UiLCJpYXQiOjE2ODA1MjQ5MTEsImV4cCI6MTY4MTczNDUxMX0.2oZYBhfhQhXaCbaDznH8hSqN7XVcpu9midKv8npjpO4";
 let  url="https://striveschool-api.herokuapp.com/api/comments/"
@@ -30,7 +30,7 @@ let  url="https://striveschool-api.herokuapp.com/api/comments/"
 const Delete = (props) =>
 
     
-    <Button variant="danger" onClick={()=>{deletePost(props._id)}}>Delete</Button>
+    <Button variant="outline-danger" type="submit" size="sm" onClick={()=>{deletePost(props._id)}}>Delete</Button>
 
 
 
