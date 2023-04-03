@@ -16,6 +16,7 @@ let  url="https://striveschool-api.herokuapp.com/api/comments/"
         }
         
     })
+    console.log(id)
     }
 
 

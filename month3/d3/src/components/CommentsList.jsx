@@ -20,7 +20,7 @@ class CommentsList extends Component{
 
                 return(
                     
-                <SingleComments comment={el.comment} rate={el.rate} id={el.elementId} />
+                <SingleComments _id={el._id} comment={el.comment} rate={el.rate} id={el.elementId} />
                
                 );
 
