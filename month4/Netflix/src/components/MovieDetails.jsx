@@ -89,8 +89,11 @@ return(
         </Card.Text>
       </Card.Body>
       <Card.Footer>
-      <Button onClick={()=>{navigate("/movie-details/comments/"+imdbID.imdbID) 
-        getComments()}}>See Comments</Button>
+      <Button onClick={()=>{
+          getComments()
+        navigate("/movie-details/comments/"+imdbID.imdbID) 
+        
+        }}>See Comments</Button>
       </Card.Footer>
     </Card>
        
