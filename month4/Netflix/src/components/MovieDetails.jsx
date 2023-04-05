@@ -90,7 +90,6 @@ return(
       </Card.Body>
       <Card.Footer>
       <Button onClick={()=>{
-          getComments()
         navigate("/movie-details/comments/"+imdbID.imdbID) 
         
         }}>See Comments</Button>

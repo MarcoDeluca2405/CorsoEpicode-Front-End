@@ -43,11 +43,11 @@ function App() {
 
   <Route path='/TV' element={ <TVShows />} />
   
-  <Route path="/movie-details/:imdbID" element={<MovieDetails />} />
+  <Route path="/movie-details/:imdbID" element={<MovieDetails changeMovie={setComments} />} />
 
   <Route path="/movie-details/comments/:imdbID" element={
     <div className='d-colum'>
-<MovieDetails comments={comments} changeMovie={setComments}/>
+<MovieDetails  changeMovie={setComments} />
 <SingleMovies comments={comments} />
 </div>
   }
