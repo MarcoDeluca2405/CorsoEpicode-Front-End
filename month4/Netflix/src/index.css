@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+html{
+  background-color: #282c34;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Netflix{
+  width: 100px;
+}
+.MyProfile{
+  width: 40px;
+}
+.MyNav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.MyDiv{
+  width: 100%;
+  display: flex;
+  text-align-last:end;
+}
+
+.cardImg{
+  height: 100px;
+}
+
+
+.nav-link{
+  position: relative;
+  bottom: 0px;
+  transition: color 0.5s, bottom 0.5s linear !important;
+}
+
+.nav-link:hover{
+  color:red!important;
+  bottom:5px;
+}
+
+.dropdown-menu.show{
+text-align-last: left;
+background-color: #282c34;
+}
+
+.dropdown-item{
+  color: white !important;
+}
+
+.dropdown-item:hover{
+
+  background-color: rgba(0, 0, 0, 0.39) !important;
+}
