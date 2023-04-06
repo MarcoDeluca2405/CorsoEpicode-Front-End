@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 let url="http://www.omdbapi.com/?&apikey=769155e5&i=";
 let urlC="https://striveschool-api.herokuapp.com/api/comments/";
-let authorazation="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJhYzY2ZjY4MzQzMTAwMTRkZWE3N2UiLCJpYXQiOjE2ODA3MDU3ODUsImV4cCI6MTY4MTkxNTM4NX0.kCItpIFab3GyF_QakGEv_-2y83ZmzhMAZ_8s6RQy5u8";
+let authorazation="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJhYzY2ZjY4MzQzMTAwMTRkZWE3N2UiLCJpYXQiOjE2ODA3NjU0MDIsImV4cCI6MTY4MTk3NTAwMn0.yrHzpR_8rPzH0fFtDK3UCaaFcityks4hAQ-1YajraiM";
 
 const MovieDetails =(props)=>{
 
