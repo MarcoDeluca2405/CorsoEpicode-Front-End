@@ -23,7 +23,7 @@ const MeteoLocation= () =>{
         
         try {
             
-            const urlCoding=`http://api.openweathermap.org/geo/1.0/direct?q=${city},IT&limit=1&appid=8cdafc0e1a99c13d56957f350ac92768`;
+            const urlCoding=`http://api.openweathermap.org/geo/1.0/direct?q=${city},IT&limit=1&appid=f67f359c5dc6e42aadd29c188f4f7358`;
     
             const resposive=await fetch(urlCoding);
             if(resposive.ok){
@@ -53,7 +53,7 @@ const MeteoLocation= () =>{
     const getLocationM=async ()=>{
    
         try {   
-            const url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=8cdafc0e1a99c13d56957f350ac92768`;
+            const url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=f67f359c5dc6e42aadd29c188f4f7358`;
             const responsive=await fetch(url)
                 const data=await responsive.json();
                 console.log("datati Meteo Luogo",data)
