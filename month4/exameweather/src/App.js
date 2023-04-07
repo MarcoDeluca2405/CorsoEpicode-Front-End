@@ -15,7 +15,14 @@ function App() {
 
       <Routes>
 
-      <Route path='/' element={<MainHome />} />
+      <Route path='/' element={
+        <>
+      <MainHome />
+      <div className='myMeteo'>
+
+        </div>
+        </>
+    } />
       <Route path='/Meteo' element={
         <>
         <MainHome />

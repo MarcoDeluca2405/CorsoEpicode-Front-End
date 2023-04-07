@@ -95,6 +95,7 @@
    background-image: url("https://c4.wallpaperflare.com/wallpaper/399/538/511/the-sky-the-ocean-island-resort-wallpaper-preview.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
+  height: 60vh;
 }
 .imgw{
   width: 100px;

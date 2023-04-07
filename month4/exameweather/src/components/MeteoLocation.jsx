@@ -82,8 +82,7 @@ const MeteoLocation= () =>{
 
     return(
 
-        <Container className="d-flex justify-content-center vh-100">
-
+        <Container className="d-flex justify-content-center ">
 <Card style={{ width: '30rem' }} className="bg-dark">
         {weather&&"Clear" && (<img src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg" className="imgw" alt="clear"></img> )}
         {weather&&"Sun" && (<img src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg" className="imgw" alt="clear"></img> )}
@@ -95,11 +94,15 @@ const MeteoLocation= () =>{
         <Card.Text className="d-colum border border-1 bg-dark text-light">
          
  
-            <p>Temperatura: {LocationTemp.temp} °C</p>
-            <p>Temp min: {LocationTemp.temp_min}°C</p>
-            <p>Temp max: {LocationTemp.temp_max}°C</p>
-            <p>Pressione: {LocationTemp.pressure} bar</p>
-            <p>Umidità: {LocationTemp.humidity} um</p>
+        {LocationTemp &&   <p>Temperatura: {LocationTemp.temp} °C</p>}
+
+          {LocationTemp &&  <p>Temp min: {LocationTemp.temp_min}°C</p> }
+          {LocationTemp &&  <p>Temp max: {LocationTemp.temp_max}°C</p> }
+          {LocationTemp && <p>Pressione: {LocationTemp.pressure} bar</p> }
+          {LocationTemp &&  <p>Umidità: {LocationTemp.humidity} um</p> }
+            
+        
+                                                 
    
      
         </Card.Text>
