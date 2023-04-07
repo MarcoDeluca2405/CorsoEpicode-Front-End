@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.myCoverBanner{
+  background-image: url("https://img.freepik.com/premium-vector/abstract-banner-background_181182-12423.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.myNavLink{
+  width: 170px;
+}
+
+.myImg{
+  width: 100px;
+}
+
+.myCoverBanner a{
+
+  text-decoration: none;
+  color: #282c34ae;
+}
+
+.myCoverBanner a:hover{
+  color: black;
+}
+
+.myCoverBanner a.active{
+  color: #282c34;
+}
+
+.myFooterBanner{
+  background-image: url("https://i.pinimg.com/originals/b1/67/83/b167836d2de1657d772c8056d39886ed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  
+
+}
+
+
+.myImg2{
+  width: 50px;
+}
+
+.icon{
+  font-size: 30px;
+
+}
+
+.myHero{
+  background: rgb(10,242,255);
+  background: linear-gradient(320deg, rgba(10,242,255,0.42620798319327735) 21%, rgba(0,22,210,0.28895308123249297) 80%);
+}
+
+.myMeteo{
+   background-image: url("https://c4.wallpaperflare.com/wallpaper/399/538/511/the-sky-the-ocean-island-resort-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.imgw{
+  width: 100px;
+}
