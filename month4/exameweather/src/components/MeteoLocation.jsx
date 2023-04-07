@@ -63,7 +63,7 @@ const MeteoLocation= () =>{
                 })
                 dispatch({
                     type:'set_Weather',
-                    payload:data.weather.main
+                    payload:data.weather[0]
                 })
                 
             } catch (error) {
@@ -78,16 +78,19 @@ const MeteoLocation= () =>{
         }
         ,[useSelector((state)=>state.meteo.Location.City)])
         
-        
+   
 
     return(
 
-        <Container className="d-flex justify-content-center ">
-<Card style={{ width: '30rem' }} className="bg-dark">
-        {weather&&"Clear" && (<img src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg" className="imgw" alt="clear"></img> )}
-        {weather&&"Sun" && (<img src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg" className="imgw" alt="clear"></img> )}
-        {weather&&"Rain" && (<img src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg"  className="imgw" alt="clear"></img> )}
-        
+        <Container className="d-flex justify-content-center">
+<Card style={{ width: '20rem' }} className="bg-dark my-4">
+   
+  {weather.main==="Clear" && (<Card.Img variant="top" src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg" className="imgw" alt="clear" />)}
+        {weather.main==="Sun" && (<Card.Img variant="top" src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg" className="imgw" alt="clear" /> )}
+        {weather.main==="Rain" && (<Card.Img variant="top" src="https://thumbs.dreamstime.com/b/cielo-libero-492457.jpg"  className="imgw" alt="clear" /> )}
+        {weather.main==="Drizzle" && (<Card.Img variant="top" src="https://images.unsplash.com/photo-1508873760731-9c3d0bb6b961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZHJpenpsZXxlbnwwfHwwfHw%3D&w=1000&q=80"  className="imgw" alt="clear" /> )}
+        {weather.main==="Clouds" && (<Card.Img variant="top" src="https://www.rmets.org/sites/default/files/2022-05/Depositphotos_8469695_XL_0.jpg"  className="imgw" alt="clear" /> )}
+    
       
       <Card.Body>
         <Card.Title className="border border-1 bg-dark text-light">{city}</Card.Title>
