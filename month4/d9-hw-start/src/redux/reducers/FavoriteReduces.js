@@ -1,3 +1,5 @@
+import { ADD_FAVORITE, DELETTE_FAVORITE } from "../actions"
+
 const initiliaState={
 
     user:{
@@ -8,11 +10,11 @@ const initiliaState={
 
 }
 
-const mainReduces=  (state=initiliaState,action)=>{
+const FavoriteReduces=  (state=initiliaState,action)=>{
 
     switch(action.type){
 
-        case 'ADD_FAVORITE':
+        case ADD_FAVORITE:
             return{
                 ...state,     
                 user:{
@@ -22,7 +24,7 @@ const mainReduces=  (state=initiliaState,action)=>{
 
             }
 
-            case 'DELETTE_FAVORITE':
+            case DELETTE_FAVORITE:
 
             return{
                 ...state,
@@ -42,4 +44,4 @@ const mainReduces=  (state=initiliaState,action)=>{
 
 }
 
-export default mainReduces
+export default FavoriteReduces

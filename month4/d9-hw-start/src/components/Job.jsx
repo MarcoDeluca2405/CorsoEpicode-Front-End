@@ -1,13 +1,14 @@
 import { Row, Col, Button } from 'react-bootstrap'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import { addFavorite } from '../redux/actions';
 
 
 const Job = ({ data }) => {
 
   
   const dispatch= useDispatch();
-const navigate=useNavigate();
+
 
 
 
@@ -21,18 +22,21 @@ return(
    
       <Link to={`/${data.company_name}`}>{data.company_name}</Link>
     </Col>
-    <Col xs={9}>
+    <Col xs={4}>
 
       <a href={data.url} target="_blank" rel="noreferrer">
         {data.title}
       </a>
-      <Button className="mx-2" bg="succes" onClick={()=>{
-dispatch({
-  type:'ADD_FAVORITE',
-  payload:data,
-})
+</Col>
+  <Col xs={5}>
+      <Button className="mx-2" bg="succes" onClick={
+        ()=>{
+          dispatch(addFavorite(data))
+        console.log("è stato aggiunto un nuovo elemento: ",data.title)
+        
+        }
 
-      }} >Add Favorite</Button>
+      } >Add Favorite</Button>
     
     </Col>
 

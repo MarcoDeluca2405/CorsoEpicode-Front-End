@@ -5,11 +5,12 @@ import { Col } from 'react-bootstrap/esm';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { deletteFav } from '../redux/actions';
 
 
 const Favorites= ()=>{
     
-   const favoriteComapny=useSelector((state)=>state.user.favorite)
+   const favoriteComapny=useSelector((state)=>state.favorite.user.favorite)
    const dispatch=useDispatch();
     const navigate=useNavigate();
 
@@ -29,10 +30,7 @@ const Favorites= ()=>{
             console.log(user,i)
             return(
                 
-                <ListGroup.Item key={i}><a href={user.url}>{user.title},  {user.company_name}</a> <Button bg="danger" onClick={()=>{dispatch({
-                    type:'DELETTE_FAVORITE',
-                    payload:i,
-                })}}>Delete</Button> </ListGroup.Item>
+                <ListGroup.Item key={i}><a href={user.url}>{user.title},  {user.company_name}</a> <Button bg="danger" onClick={()=>{dispatch(deletteFav(i))}}>Delete</Button> </ListGroup.Item>
 
             )
 
@@ -42,7 +40,7 @@ const Favorites= ()=>{
      
     </ListGroup>
 
-                <Button bg="dark" onClick={()=>{navigate("/")}}>Home</Button>
+                <Button bg="dark" onClick={()=>{navigate("/") }}>Home</Button>
 
             </Col>
         </Row>
