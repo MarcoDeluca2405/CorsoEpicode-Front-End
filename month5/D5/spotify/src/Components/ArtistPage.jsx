@@ -32,10 +32,10 @@ const ArtistPage= ()=>{
              Followers:   {artist?.nb_fan}
                 </div>
             <div className="d-flex justify-content-center" id="button-container">
-              <button className="btn btn-success mr-2 mainButton d-none" id="playButton">
+              <button className="btn btn-success mr-2 mainButton " id="playButton">
                 PLAY
               </button>
-              <button className="btn btn-outline-light mainButton d-none" id="followButton">
+              <button className="btn btn-outline-light mainButton " id="followButton">
                 FOLLOW
               </button>
             </div>

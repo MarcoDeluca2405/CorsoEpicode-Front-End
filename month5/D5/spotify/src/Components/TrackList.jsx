@@ -1,10 +1,12 @@
+import { useDispatch } from "react-redux"
+import { selectedTrack } from "../redux/actions"
 
 
 const TrackList = (props)=>{
-
+const dispatch=useDispatch()
 return(
 
-    <div class="py-3 trackHover">
+    <div class="py-3 trackHover"  onClick={()=>{dispatch(selectedTrack(props))}}>
 
                 <a href="#" class="card-title trackHover px-3" style={{color:"white"}} >{
                   props.track.title

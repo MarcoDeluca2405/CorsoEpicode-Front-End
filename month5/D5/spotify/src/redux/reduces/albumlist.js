@@ -1,4 +1,4 @@
-import { ADD_ALBUM, ADD_QUERY, HIPHOP, POP, ROCK, SELECTED_ALBUM, SET_SELECTED } from "../actions"
+import { ADD_ALBUM, ADD_QUERY, HIPHOP, POP, ROCK, SELECTED_ALBUM, SELECTED_TRACK, SET_SELECTED } from "../actions"
 
 
 const initialState={
@@ -10,7 +10,8 @@ const initialState={
         search: "",
         rock:[],
         pop:[],
-        hiphop:[]
+        hiphop:[],
+        selectedTrack:[]
     }
 
 }
@@ -96,6 +97,19 @@ const albumListReducer= (state=initialState,action)=>{
             }
 
         }
+
+        case SELECTED_TRACK:
+
+        return{
+
+            ...state,
+            albumList:{
+                ...state.albumList,
+                selectedTrack:action.payload
+            }
+
+        }
+
 
         
 

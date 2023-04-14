@@ -15,19 +15,19 @@ const AlbumList = (props)=>{
             
             <p>
               <a href="#">
-                Track: "${
+                Track: {
                   props.album.title.length < 16
                     ? props.album.title
                     : props.album.title.substring(0, 16) // setting the track title, if it's longer than 16 chars cuts the rest
-                }"
+                }
               </a><br></br>
               <Link to="/Album">
 
-                Album: "${
+                Album: {
                     props.album.album.title.length < 16
                     ? props.album.album.title
                     : props.album.album.title.substring(0, 16) // setting the track title, if it's longer than 16 chars cuts the rest
-                }"
+                }
                 </Link>
               
             </p>

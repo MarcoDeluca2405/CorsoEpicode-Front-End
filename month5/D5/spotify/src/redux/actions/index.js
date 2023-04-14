@@ -8,7 +8,14 @@ export const ROCK="ROCK";
 export const POP="POP";
 export const HIPHOP="HIPHOP";
 export const SELECTED_ALBUM="SELECTED_ALBUM";
+export const SELECTED_TRACK="SELECTED_TRACK";
 
+export const selectedTrack=(track)=>({
+
+    type:SELECTED_TRACK,
+    payload:track
+
+})
 
 export const addALLAlbum=(allAlbum)=>({
 
