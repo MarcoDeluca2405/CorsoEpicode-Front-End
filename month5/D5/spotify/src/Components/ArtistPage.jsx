@@ -11,7 +11,7 @@ const ArtistPage= ()=>{
     const dispatch=useDispatch()
     const artist=useSelector((state)=>state.albumList.selectedAlbum)
     useEffect(()=>{dispatch(getArtistSelected(idArtist.album.artist.id))},[idArtist])
-    useEffect(()=>{dispatch(getAlbum(idArtist.album.artist.name))},[idArtist])
+    useEffect(()=>{dispatch(getAlbum(idArtist.album.artist.name))},[])
 
     return(
 
