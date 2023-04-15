@@ -9,6 +9,24 @@ export const POP="POP";
 export const HIPHOP="HIPHOP";
 export const SELECTED_ALBUM="SELECTED_ALBUM";
 export const SELECTED_TRACK="SELECTED_TRACK";
+export const ADD_FAV="ADD_FAV";
+export const DELETTE_FAV="DELETTE_FAV";
+
+export const addFavorite=(track)=>({
+
+    type:ADD_FAV,
+    payload:track
+
+})
+
+export const removeFavorite=(track)=>({
+
+    type:DELETTE_FAV,
+    payload:track
+
+})
+
+
 
 export const selectedTrack=(track)=>({
 

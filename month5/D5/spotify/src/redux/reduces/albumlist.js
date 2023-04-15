@@ -1,4 +1,4 @@
-import { ADD_ALBUM, ADD_QUERY, HIPHOP, POP, ROCK, SELECTED_ALBUM, SELECTED_TRACK, SET_SELECTED } from "../actions"
+import { ADD_ALBUM, ADD_FAV, ADD_QUERY, DELETTE_FAV, HIPHOP, POP, ROCK, SELECTED_ALBUM, SELECTED_TRACK, SET_SELECTED } from "../actions"
 
 
 const initialState={
@@ -11,7 +11,8 @@ const initialState={
         rock:[],
         pop:[],
         hiphop:[],
-        selectedTrack:[]
+        selectedTrack:[],
+        fav:[],
     }
 
 }
@@ -106,6 +107,29 @@ const albumListReducer= (state=initialState,action)=>{
             albumList:{
                 ...state.albumList,
                 selectedTrack:action.payload
+            }
+
+        }
+
+        case ADD_FAV:
+
+        return{
+            ...state,
+            albumList:{
+                ...state.albumList,
+                fav:[...state.albumList.fav,action.payload]
+
+            }
+
+        }
+
+        case DELETTE_FAV:
+
+        return{
+            ...state,
+            albumList:{
+                ...state.albumList,
+                fav:[...state.albumList.fav.slice(0,action.payload),...state.albumList.fav.slice(action.payload+1)]
             }
 
         }

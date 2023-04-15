@@ -11,6 +11,7 @@ import store from './redux/store';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AlbumPage from './Components/AlbumPage';
 import ArtistPage from './Components/ArtistPage';
+import FavoriteTrack from './Components/FavoriteTrack';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
   <Route path="/" element={<MainPage /> } />
   <Route path="/Album" element={<AlbumPage />} />
   <Route path="/Artist" element={<ArtistPage />} />
+  <Route path="/Fav" element={<FavoriteTrack />} />
 
 </Routes>
 

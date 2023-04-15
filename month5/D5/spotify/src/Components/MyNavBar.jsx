@@ -32,10 +32,21 @@ return(
               </NavLink>
               
             </li>
-            <li>
-              <a className="nav-item nav-link" href="#"><Icon.FaBookOpen />&nbsp; Your
-                Library</a>
+            <li className="lin" >
+            <NavLink to="#" >
+              <Icon.FaBookOpen />&nbsp; Your
+                Library
+                </NavLink>
             </li>
+
+            <li className="lin" >
+              <NavLink to="/Fav" >
+
+            <Icon.FaHeart/>&nbsp; MyFavorite
+              </NavLink>
+              
+            </li>
+
             <li>
         <div className="input-group mt-3">
           <input type="text" className="form-control form-control-sm mb-2" id="searchField" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2"  value={query} onChange={(e)=>{setQuery(e.target.value)}} />

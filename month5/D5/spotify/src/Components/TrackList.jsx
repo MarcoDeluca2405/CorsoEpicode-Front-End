@@ -1,17 +1,46 @@
-import { useDispatch } from "react-redux"
-import { selectedTrack } from "../redux/actions"
-
+import { useDispatch, useSelector } from "react-redux"
+import { addFavorite, removeFavorite, selectedTrack } from "../redux/actions"
+import { useState } from "react"
+import * as Icon from "react-icons/ri"
 
 const TrackList = (props)=>{
 const dispatch=useDispatch()
+const [fav,setFav]= useState(false)
+const isFav=useSelector((state)=>state.albumList.fav)
 return(
 
-    <div class="py-3 trackHover"  onClick={()=>{dispatch(selectedTrack(props))}}>
+    <div className="py-3 trackHover d-flex justify-content-between"  onClick={()=>{dispatch(selectedTrack(props))}}>
+         
 
-                <a href="#" class="card-title trackHover px-3" style={{color:"white"}} >{
+            {isFav.index === props.index ? (
+
+                
+              <div className="text-light" onClick={()=>{
+                setFav(false)
+                dispatch(removeFavorite(props.index))
+                
+                }} >
+            <Icon.RiHeartsFill size={20} />
+            </div>
+            
+            ) : (
+            
+            <div className="text-light" onClick={()=>{
+              setFav(true)
+              dispatch(addFavorite(props))
+            }} >
+            <Icon.RiHeartsLine size={20}/>
+            </div>
+            
+            
+            ) }
+            
+            
+          
+                <a href="#" className="card-title trackHover px-3" style={{color:"white"}} > {
                   props.track.title
                 }</a>
-                <small class="duration" style={{color:"white"}}>{Math.floor(
+                <small className="duration" style={{color:"white"}}>{Math.floor(
                   parseInt(props.track.duration) / 60 // setting the duration minutes
                 )}:{
           parseInt(props.track.duration) % 60 < 10

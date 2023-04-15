@@ -43,9 +43,9 @@ const AlbumPage= ()=>{
               <div className="col-md-10 mb-5" id="trackList" >
 
               {
-                albumAll?.data?.map(el=>{
+                albumAll?.data?.map((el,i)=>{
                     console.log()
-                    return <TrackList key={el.id} track={el} />
+                    return <TrackList key={el.id} track={el} index={i}/>
 
                 })
               }

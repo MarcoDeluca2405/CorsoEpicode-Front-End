@@ -36,12 +36,10 @@ return(
     </Row>
     <Row className="row">
       <Col className="col-10">
-       { album ? <div id="searchResults" style={{display: 'none'}}> </div> 
-          
-          : 
-          
-          <div id="searchResults" > </div>}
-          <h2>Search Results</h2>
+       { query ? <div id="searchResults" >  
+
+
+       <h2>Search Results</h2>
           <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" >
           {album?.map((el,i)=>{
             if(i<4){
@@ -49,6 +47,15 @@ return(
             }
           })}
         </div>
+
+ </div> 
+          
+          : 
+          
+          <div id="searchResults" style={{display: 'none'}}> 
+         
+          </div>}
+          
       </Col>
     </Row>
     <Row className="row">
