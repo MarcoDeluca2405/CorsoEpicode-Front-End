@@ -7,12 +7,32 @@ const TrackList = (props)=>{
 const dispatch=useDispatch()
 const [fav,setFav]= useState(false)
 const isFav=useSelector((state)=>state.albumList.fav)
+const array=[];
+
+
 return(
 
     <div className="py-3 trackHover d-flex justify-content-between"  onClick={()=>{dispatch(selectedTrack(props))}}>
          
 
-            {isFav.index === props.index ? (
+
+            {isFav?.map((el,i)=>{
+
+                return(
+                i === props.index &&  (
+                
+                <div className="text-light" onClick={()=>{
+                  setFav(true)
+                  dispatch(addFavorite(props))
+                }} >
+                <Icon.RiHeartsLine size={20}/>
+                </div>
+                
+                
+                )
+                )
+
+            }) ? (
 
                 
               <div className="text-light" onClick={()=>{
@@ -33,7 +53,7 @@ return(
             </div>
             
             
-            ) }
+            )  }
             
             
           
