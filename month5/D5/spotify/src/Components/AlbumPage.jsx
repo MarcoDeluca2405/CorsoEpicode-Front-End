@@ -9,6 +9,7 @@ const AlbumPage= ()=>{
     const Artist=useSelector((state)=>state.albumList.selected)
     const albumAll=useSelector((state)=>state.albumList.selectedAlbum.tracks)
     useEffect(()=>{dispatch(getAlbumSelected(Artist.album.album.id))},[Artist])
+    const isFav=useSelector((state)=>state.albumList.fav)
     
     return(
         <div className="col-12 col-md-9 offset-md-3 mainPage">
@@ -44,9 +45,12 @@ const AlbumPage= ()=>{
 
               {
                 albumAll?.data?.map((el,i)=>{
-                    console.log()
-                    return <TrackList key={el.id} track={el} index={i}/>
+                   
+                  
 
+                    return <TrackList key={el.id} track={el} index={i} />
+                    
+                 
                 })
               }
 
