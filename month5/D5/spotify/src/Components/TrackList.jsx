@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch} from "react-redux"
 import { addFavorite, removeFavorite, selectedTrack } from "../redux/actions"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import * as Icon from "react-icons/ri"
 
 const TrackList = (props)=>{

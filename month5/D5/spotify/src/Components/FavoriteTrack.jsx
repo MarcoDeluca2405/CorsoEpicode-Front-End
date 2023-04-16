@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import TrackList from "./TrackList"
+import FavoriteList from "./FavoriteList"
 
 
 const FavoriteTrack= ()=>{
@@ -22,7 +22,7 @@ const FavoriteTrack= ()=>{
         {
             MyfavTrack?.map((el,i)=>{
                 console.log(el.track)
-                return <TrackList key={el.id} track={el.track} index={i}/>
+                return <FavoriteList key={el.id} track={el.track} index={i}/>
 
             })
         }
